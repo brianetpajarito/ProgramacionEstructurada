@@ -1,0 +1,29 @@
+Cuando imprimimos un arreglo: printf("\nDireccion de temp[24]: %d",temp); 
+imprime la dirección de memoria porque al colocarle la [24] temp se convierte en un apuntador.
+
+Para imprimir una posción del arreglo, se toma a partir del 0, es decir, usando el ejemplo de temp[24], para imprimir la última posición es:
+printf("\nDireccion de la ultima posicion de temp[24]: %d", &temp[23]);
+
+Código:
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float t1,t2;
+    float temp[24]; //Apuntador
+    temp[0]=20.5;
+    temp[1]=19.2;
+    int si;
+    printf("Direccion de memoria de dos enteros: %d, %d",&t1,&t2);
+    printf("\nDireccion de temp[24]: %d",temp); //Imprime la dirección de memoria porque al colocarle la [24] temp se convierte en un apuntador
+    printf("\nDireccion de memoria de temp[24]: %d",&temp[23]);
+    
+    printf("\n\ntemp[24]: %f",temp[23]);
+    printf("\ntemp[0]: %f",temp[0]);
+    printf("\ntemp[1]: %f",temp[1]);
+    
+    printf("\n\nDireccion de memoria de si %i\n",&si);
+
+    return 0;
+}
