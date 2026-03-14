@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
     char Alumno1[16]="Antonio";
@@ -27,9 +28,9 @@ int main(){
     for(int i = 0; i < 3; i++) { //imprime las primeras 3 filas de la lista
         printf("Tu nombre es: %s", lista[i]);
     }
-    printf("\n");
 
     //STRLEN
+    printf("\nLONGITUD\n");
     int longitud;
 
     for(int i = 0; i < 3; i++) { //imprime las primeras 3 filas de la lista
@@ -37,6 +38,47 @@ int main(){
         printf("\nLa longitud de %s es de %d", lista[i],longitud);
     }
 
+    //STRCPY
+    printf("\n\nCOPIA DE LISTA\n");
+    char copia[16];
+
+    for(int i = 0; i < 3; i++) { //imprime las primeras 3 filas de la lista
+        strcpy(copia,lista[i]); //Strlen=longitud
+        printf("%s", copia);
+    }
+    printf("\n");
+
+    //STRCAT
+    printf("\nCONCATENACION\n");
+    char nombre[16];
+    char apellido[16];
+
+    printf("¿Cual es tu nombre? ");
+    scanf("%s",&nombre);
+    printf("¿Cual es tu apellido? ");
+    scanf("%s",&apellido);
+
+    strcat(nombre, " ");
+    strcat(nombre, apellido);
+    printf("Tu nombre completo es: %s", nombre);
+
+    //STRCMP
+    printf("\n\nCOMPARACION\n");
+    printf("¿Cual es tu nombre? ");
+    scanf("%s",&nombre);
+    printf("¿Cual es tu apellido? ");
+    scanf("%s",&apellido);
+
+    strcmp(nombre, apellido);
+    if(strcmp(nombre,apellido) == 0){
+        printf("Tienen la misma longitud");
+    }
+    else if(strcmp(nombre,apellido)<0){
+        printf("Tu nombre es mas corto");
+    }
+    else if(strcmp(nombre,apellido)>0){
+        printf("Tu apellido es mas corto");
+    }
+
     return 0;
 }
-
