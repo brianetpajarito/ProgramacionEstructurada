@@ -9,7 +9,6 @@ int main()
 
     char Jugador1[10]="Mireya";
     char Jugador2[10];
-    char linea[100];
 
     for(int i=0; i<m; i++){
         for (int j=0; j<n; j++){
@@ -21,6 +20,8 @@ int main()
     tablero[3][4]='X';
     tablero[2][1]='O';
 
+    printf("Simulando tablero de juego...\n");
+
     for(int i=0; i<m; i++){
         for (int j=0; j<n; j++){
             printf(" %c",tablero[i][j]);
@@ -31,7 +32,7 @@ int main()
     FILE *archivo;
     archivo=fopen("tablero.txt","w");
 
-    printf("Ingresa nombre del jugador 2: ");
+    printf("\nIngresa nombre del jugador 2: ");
     fgets(Jugador2,sizeof(Jugador2),stdin);
 
     fprintf(archivo,"%s\n",Jugador1);
@@ -46,13 +47,21 @@ int main()
 
     FILE *archivoe;
     archivoe=fopen("tablero.txt","r");
-    
-    for(int i=0; i<m; i++){
-        for (int j=0; j<n; j++){
-            fscanf(archivo,"%s",linea);
-        }
-        fscanf(archivo,"\n");
+
+    char LeerNom1[10];
+    char LeerNom2[10];
+    char linea[100];
+
+    fgets(LeerNom1, sizeof(LeerNom1), archivoe);
+    printf("\n--- Nombres extraidos del archivo ---\n");
+    printf("Jugador 1: %s", LeerNom1);
+
+    for(int i=0; i<m; i++) {
+        fgets(linea, sizeof(linea), archivoe); // Solo leemos y sobrescribimos "linea" para avanzar
     }
+
+    fgets(LeerNom2, sizeof(LeerNom2), archivoe);
+    printf("Jugador 2: %s", LeerNom2);
 
     return 0;
 }
