@@ -6,10 +6,11 @@ int main()
     char lista[4][10];
 
     char Arreglo[5];
-    printf("%d\n\n",Arreglo); //Apuntador: hace referencia a donde comienza un arreglo (la dirección)
-    printf("%d\n\n",Arreglo[6]); //fuera de rango, imprime 0
+    printf("Apuntador de Arreglo[5]: %d\n\n",Arreglo); //Apuntador: hace referencia a donde comienza un arreglo (la dirección)
+    printf("Fuera de rango del arreglo: %d\n\n",Arreglo[6]); //fuera de rango, imprime 0
 
-    for (int i=0; i<4; i++){
+    printf("Direccion de cada posicion del arreglo:\n");
+    for (int i=0; i<5; i++){
         printf("%d\n",&Arreglo[i]); //imprime la dirección de memoria de cada índice del arreglo
     }
     printf("\n");
@@ -33,4 +34,3 @@ int main()
 
     return 0;
 }
-
