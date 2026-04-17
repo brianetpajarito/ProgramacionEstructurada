@@ -26,6 +26,10 @@ void mostrarMatriz(int m[2][3]){
     }
 }
 
+void duplicar(int *x){
+    *x=(*x)*2;
+}
+
 int main()
 {
     int a,b,c;
@@ -43,6 +47,11 @@ int main()
     printf("\n\nMatriz: \n");
     int si[2][3]={{1,2,3},{4,5,6}};
     mostrarMatriz(si);
+
+    int n=4;
+    printf("\n\nDuplicar %d: ",n);
+    duplicar(&n);
+    printf("%d",n);
 
     return 0;
 }
