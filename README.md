@@ -1,6 +1,6 @@
 # Programación Estructurada
 Nombre del estudiante: Brianet Mireya Pajarito Guzmán
-Código: 325019032
+\nCódigo: 325019032
 Sección: D04
 Profesor: Jorge Ernesto Lopez Arce Delgado
 
