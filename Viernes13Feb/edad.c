@@ -1,4 +1,4 @@
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main(){
     int age;
@@ -11,4 +11,3 @@ int main(){
         printf("Eres menor de edad\n");
     }
 }
-*/
