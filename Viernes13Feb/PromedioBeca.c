@@ -1,5 +1,5 @@
-//Si tiene promedio m·s de 85 y 0 materias reprobadas obtiene la beca
-/*#include <stdio.h>
+//Si tiene promedio m√°s de 85 y 0 materias reprobadas obtiene la beca
+#include <stdio.h>
 
 int main(){
     int prom, rep;
@@ -14,4 +14,3 @@ int main(){
         printf("\nNO obtuviste la beca :(\n");
     }
 }
-*/
